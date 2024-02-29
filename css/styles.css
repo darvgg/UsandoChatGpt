@@ -46,10 +46,14 @@ li {
 
 /* Estilos para el botón de eliminar */
 .deleteButton {
-    background-color: #ff0101; /* Color rojo claro */
-    padding: 8px 12px; /* Espacio alrededor del texto */
+    background-color:red; /* Color rojo claro */
     border: none;
     cursor: pointer;
+    padding: 0;
+}
+.deleteButton img{
+    width: 20px;
+    height: auto;
 }
 
 /* Estilos para la imagen del basurero */
