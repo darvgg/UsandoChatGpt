@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 10px;
+}
+.taskItem {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Alinear los elementos al inicio y al final */
+    align-items: center; /* Alinear verticalmente */
+    margin-bottom: 10px; /* Espacio entre las tareas */
+}
+
+/* Estilos para el botón de completada */
+.completeButton {
+    color: white; /* Color del texto */
+    padding: 8px 12px; /* Espacio alrededor del texto */
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de eliminar */
+.deleteButton {
+    background-color: #ff0101; /* Color rojo claro */
+    padding: 8px 12px; /* Espacio alrededor del texto */
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para la imagen del basurero */
+.trashIcon {
+    width: 8px; /* Ancho de la imagen */
+    height: 12px; /* Alto de la imagen */
+    vertical-align: middle; /* Alinear verticalmente la imagen */
+}
+.tryButton {
+    background-color: #4caf50; /* Color verde */
+    color: white; /* Color del texto */
+    padding: 8px 12px; /* Espacio alrededor del texto */
+    border: none;
+    cursor: pointer;
+    margin-left: 5px; /* Espacio entre los botones */
+}

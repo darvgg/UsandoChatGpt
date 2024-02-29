@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <input type="text" id="taskInput" placeholder="Agregar nueva tarea">
+        <button onclick="addTask()">Agregar</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- Nuevo contenedor para tareas completadas -->
+    <div class="container" id="completedTasks">
+        <h2>Tareas Completadas</h2>
+        <ul id="completedTasksList"></ul>
+        <p id="completedCount">Tareas completadas: <span id="completedTaskCount">0</span></p>
+    </div>
+
+    <!-- Nuevo contenedor para tareas eliminadas -->
+    <div class="container" id="deletedTasksContainer">
+        <h2>Tareas Eliminadas</h2>
+        <ul id="deletedTasksList"></ul>
+    </div>
+    
+    <script src="javascript/script.js"></script>
+</body>
+</html>
