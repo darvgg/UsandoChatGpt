@@ -10,7 +10,7 @@ function addTask() {
         var taskItem = document.createElement("li");
         var taskTextSpan = document.createElement("span");
         taskTextSpan.textContent = taskText;
-        
+        taskItem.classList.add("taskItem");
         // Crear el botón Completada
         var completeButton = document.createElement("button");
         completeButton.textContent = "Completada";
@@ -38,26 +38,28 @@ function addTask() {
         trashIcon.alt = "Eliminar"; // Texto alternativo de la imagen
         deleteButtonWithIcon.appendChild(trashIcon);
         deleteButtonWithIcon.classList.add("deleteButton");
-        deleteButtonWithIcon.addEventListener("click", function() 
-        {
-            // Mover la tarea eliminada al contenedor "deletedTasks"
-            var deletedTasks = document.getElementById("deletedTasksList");
-            var deletedTaskItem = document.createElement("li");
-            deletedTaskItem.textContent = taskText + " :( "; // Agregar la carita triste
-            // Crear el botón "Intentarlo"
-            var tryButton = document.createElement("button");
-            tryButton.textContent = "Intentarlo";
-            tryButton.classList.add("tryButton");
-            tryButton.addEventListener("click", function() 
-            {
-                alert("¡Nunca te rindas con una tarea!");
-                todayTasks.appendChild(taskItem); // Añadir la tarea eliminada de nuevo a la lista de hoy
-                deletedTasks.removeChild(deletedTaskItem); // Quitar la tarea de la lista de tareas eliminadas
-            });
-            deletedTaskItem.appendChild(tryButton);
-            deletedTasks.appendChild(deletedTaskItem);
-            // Eliminar la tarea de la lista de tareas de hoy
-            todayTasks.removeChild(taskItem);
+        deleteButtonWithIcon.addEventListener("click", function() {
+            // Mostrar un mensaje de confirmación
+            if (confirm("Estás seguro de eliminar, recuerda que puedes postergarla para otro momento")) {
+                // Si el usuario confirma, realizar la eliminación
+                // Mover la tarea eliminada al contenedor "deletedTasks"
+                var deletedTasks = document.getElementById("deletedTasksList");
+                var deletedTaskItem = document.createElement("li");
+                deletedTaskItem.textContent = taskText + " :( "; // Agregar la carita triste
+                // Crear el botón "Intentarlo"
+                var tryButton = document.createElement("button");
+                tryButton.textContent = "Intentarlo";
+                tryButton.classList.add("tryButton");
+                tryButton.addEventListener("click", function() {
+                    alert("¡Nunca te rindas con una tarea!");
+                    todayTasks.appendChild(taskItem); // Añadir la tarea eliminada de nuevo a la lista de hoy
+                    deletedTasks.removeChild(deletedTaskItem); // Quitar la tarea de la lista de tareas eliminadas
+                });
+                deletedTaskItem.appendChild(tryButton);
+                deletedTasks.appendChild(deletedTaskItem);
+                // Eliminar la tarea de la lista de tareas de hoy
+                todayTasks.removeChild(taskItem);
+            }
         });
         
         // Agregar elementos al elemento de tarea
