@@ -30,15 +30,10 @@ li {
     margin-bottom: 10px;
 }
 .taskItem {
-    display: flex;
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Alinear los elementos al inicio y al final */
     align-items: center; /* Alinear verticalmente */
-}
-.taskItem span {
-    margin-right: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: calc(100% - 120px); /* Calcula el ancho máximo para el texto de la tarea */
+    margin-bottom: 10px; /* Espacio entre las tareas */
 }
 
 /* Estilos para el botón de completada */
